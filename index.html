@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6d5dfc">
+  <title>InterviewIQ AI | Practice with purpose</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="InterviewIQ AI home">
+        <span class="brand-mark">IQ</span><span>Interview<span class="brand-accent">IQ</span><small>AI INTERVIEW COACH</small></span>
+      </a>
+      <div class="top-note"><span class="live-dot"></span> Your personal interview practice space</div>
+    </header>
+
+    <main>
+      <section id="home-screen" class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span>✦</span> YOUR NEXT OPPORTUNITY STARTS HERE</div>
+          <h1>Interview better.<br><span>Grow faster.</span></h1>
+          <p class="hero-description">Practise for the role you want with an adaptive AI interviewer. Get clear feedback that turns every answer into a chance to improve.</p>
+          <div class="feature-row">
+            <div class="feature-icon">↗</div><div><strong>Questions that adapt</strong><p>Difficulty responds to your answers.</p></div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon">◎</div><div><strong>Feedback that helps</strong><p>See strengths, gaps, and what to practise next.</p></div>
+          </div>
+          
+        </div>
+
+        <div class="setup-card">
+          <div class="card-kicker">LET'S GET YOU READY</div>
+          <h2>Choose your interview</h2>
+          <p class="muted">Select a position to personalise your session.</p>
+          <form id="setup-form">
+            <label for="position">Job position</label>
+            <div class="select-wrap">
+              <select id="position" required>
+                <option value="Python Developer">Python Developer</option>
+                <option value="Web Developer">Web Developer</option>
+                <option value="Data Analyst">Data Analyst</option>
+                <option value="Java Developer">Java Developer</option>
+                <option value="Software Developer">Software Developer</option>
+                <option value="HR Executive">HR Executive</option>
+              </select>
+              <span>⌄</span>
+            </div>
+            <div class="session-info">
+              <div><span class="info-icon">◷</span><span><strong>6 questions</strong><small>About 10–15 minutes</small></span></div>
+              <div><span class="info-icon">✦</span><span><strong>Personalised</strong><small>AI-powered feedback</small></span></div>
+            </div>
+            <button id="start-button" class="primary-button" type="submit">Start mock interview <span>→</span></button>
+            <p class="small-print">This is a practice tool, not a formal hiring assessment.</p>
+          </form>
+        </div>
+      </section>
+
+      <section id="interview-screen" class="interview-layout hidden">
+        <aside class="session-sidebar">
+          <button id="back-home" class="back-link">← Back to positions</button>
+          <div class="role-chip"><span>✦</span><span id="role-name">Python Developer</span></div>
+          <h2>Your interview<br>in progress</h2>
+          <p class="muted">Take a breath, think it through, and answer as you would in a real interview.</p>
+          <div class="progress-label"><span>PROGRESS</span><strong id="progress-text">Question 1 of 6</strong></div>
+          <div class="progress-track"><div id="progress-bar"></div></div>
+          <div class="tip-box"><span>💡</span><div><strong>Quick tip</strong><p>Explain your reasoning and use a specific example whenever you can.</p></div></div>
+        </aside>
+        <section class="chat-panel">
+          <div class="chat-header"><div class="bot-avatar">IQ</div><div><strong>InterviewIQ AI</strong><small><span class="live-dot"></span> Interviewer is ready</small></div><span class="chat-badge">LIVE SESSION</span></div>
+          <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+          <form id="answer-form" class="answer-form">
+            <label class="sr-only" for="answer-input">Your answer</label>
+            <textarea id="answer-input" rows="3" maxlength="6000" placeholder="Type your answer here... Explain your thinking." required></textarea>
+            <div class="composer-bottom"><span id="char-count">0 / 6000</span><button id="send-button" class="primary-button" type="submit">Send answer <span>↑</span></button></div>
+          </form>
+          <p id="status-message" class="status-message" role="status"></p>
+        </section>
+      </section>
+
+      <section id="report-screen" class="report-screen hidden">
+        <div class="report-heading"><div class="eyebrow"><span>✦</span> SESSION COMPLETE</div><h1>Your progress, <span>in focus.</span></h1><p class="muted">A snapshot of what you did well and what to work on next.</p></div>
+        <div id="report-content"></div>
+        <div class="report-actions"><button id="try-again" class="primary-button">Practise another position <span>→</span></button><button id="review-home" class="secondary-button">Back to home</button></div>
+        <p class="small-print report-disclaimer">AI-generated practice feedback can be imperfect. Use it as guidance, not as a definitive measure of ability.</p>
+      </section>
+    </main>
+    <footer><span>© 2026 InterviewIQ AI</span><span>Built for practice. Designed for progress.</span></footer>
+  </div>
+ <script src="/static/script.js"></script>
+</html>
