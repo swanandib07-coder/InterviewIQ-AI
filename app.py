@@ -67,7 +67,7 @@ def ai_json(instructions, payload):
 
 @app.get("/")
 def home():
-    return send_from_directory("static", "index.html")
+    return app.send_static_file("index.html")
 
 
 @app.get("/api/health")
